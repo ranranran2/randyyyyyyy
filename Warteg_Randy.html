@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warteg Randy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+  
+  body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #E1F7F5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; /* Untuk posisi absolute pada tombol */
+}
+
+header {
+    background-color: #9AC8CD; 
+    color: #fff;
+    text-align: left;
+    padding: 20px 0;
+    padding-left: 150px;
+}
+
+main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Tambahkan align-items untuk mengatur vertikal */
+        padding: 20px;
+    }
+
+    .menu-item {
+        margin: 20px;
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 17px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        flex-direction: column;
+        justify-content: center; /* Gambar di tengah */
+        align-items: center; /* Gambar di tengah */
+        display: flex; /* Menjadikan menu-item sebagai flex container */
+        flex-direction: column; /* Menjadikan flex container dengan arah kolom */
+        justify-content: space-between; /* Menjadikan flex item untuk terdistribusi secara merata di dalam ruang kontainer */
+        transition: transform 0.3s ease; /* Menambahkan efek transisi */
+    }
+
+    .menu-item:hover {
+        transform: translateY(-5px); /* Efek pergeseran ketika dihover */
+    }
+
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.harga {
+        font-weight: bold;
+        color: #333;
+        margin-top: 5px; 
+    }
+
+    .deskripsi {
+        color: #666;
+        margin-bottom: 5px; 
+    }
+footer {
+    background-color: #9AC8CD; 
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.menu-item h2 {
+        margin: 10px 0; 
+    }
+
+    .menu-item .deskripsi {
+        margin-bottom: 5px; 
+    }
+
+    .menu-item .harga {
+        margin-top: 5px; 
+    }
+
+
+    .order-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.order-form {
+    
+    max-width: 300px; /* Atur lebar maksimum form */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.order-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.warning-box {
+        display: none;
+        background-color: #ffe6e6;
+        color: #ff3333;
+        border: 1px solid #ff3333;
+        padding: 20px; /* Lebih besar padding */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+</style>
+<body>
+<header>
+    <h1 style="font-family: 'Roboto', sans-serif;
+               font-size: 36px;
+               color: #fff;
+               text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Warteg Randy</h1>
+</header>
+    
+<main>
+  <div class="menu-item">
+      <img src="4.PNG" alt="Makanan 1">
+      <h2>Butternut squash</h2>
+      <p class="deskripsi">Sup Labu Butternut, Sup lezat dengan rasa manis dan lembut, cocok untuk musim dingin.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p class="harga">Rp. 25.000</p>
+  </div>
+
+  <div class="menu-item">
+      <img src="5.PNG" alt="Makanan 2">
+      <h2>Salad</h2>
+      <p class="deskripsi">Salad Segar, Paduan segar dari berbagai sayuran, ideal untuk hidangan ringan dan sehat.</p>
+      <br>
+      <br>
+      <br>
+      <p class="harga">Rp. 15.000</p>
+  </div>
+
+  <div class="menu-item">
+      <img src="6.PNG" alt="Makanan 3">
+      <h2>Pizza</h2>
+      <p class="deskripsi">Hidangan lezat dengan adonan panggang, saus tomat, dan berbagai topping, cocok untuk dinikmati kapan saja.</p>
+      <br>
+      <br>
+      <br>
+      <p class="harga">Rp. 75.000</p>
+  </div>
+
+  <div class="menu-item">
+      <img src="2.PNG" alt="Makanan 4">
+      <h2>Ayam Bakar</h2>
+      <p class="deskripsi">Potongan ayam lezat yang dipanggang dengan bumbu khas, cocok untuk hidangan utama yang gurih.</p>
+      <br>
+      <br>
+      <br>
+      <p class="harga">Rp. 25.000</p>
+  </div>
+
+  <form action="/submit_order" method="POST" class="order-form">
+    <label for="nama">Nama Pemesan:</label>
+    <input type="text" id="nama" name="nama" required style="width: 200px;">
+
+    <label for="menu">Menu:</label>
+<select id="menu" name="menu" required style="width: 218px;">
+    <option value="">Pilih Menu</option>
+    <option value="Butternut">Butternut squash</option>
+    <option value="Salad">Salad</option>
+    <option value="Pizza">Pizza</option>
+    <option value="Ayam Bakar">Ayam Bakar</option>
+</select>
+
+
+<label for="level_kepedasan">Level Kepedasan:</label>
+<select id="level_kepedasan" name="level_kepedasan"  required style="width: 218px;">
+    <option value="">Pilih Level Kepedasan</option>
+    <option value="pedas">Pedas</option>
+    <option value="sedang">Sedang</option>
+    <option value="tidak_pedas">Tidak Pedas</option>
+    <!-- Tambahkan opsi level kepedasan sesuai dengan kebutuhan -->
+</select>
+
+
+    <label for="jumlah_pesanan">Jumlah Pesanan:</label>
+    <input type="number" id="jumlah_pesanan" name="jumlah_pesanan" min="1" required style="width: 200px;">
+
+    <label for="catatan" style="display: block;">Catatan:</label>
+    <textarea id="catatan" name="catatan" style="width: 200px; height: 100px; margin: 0 auto; display: block;" required></textarea>
+
+    
+    <br>
+    <br>
+
+    <button type="button" onclick="pesan()">Pesan Sekarang</button>
+
+    <div id="warning-box" class="warning-box">
+        Pesanan berhasil, silahkan menunggu😄😄😄
+    </div>
+</form>
+
+<script>
+    function pesan() {
+        document.getElementById("warning-box").style.display = "block";
+    }
+</script>
+
+</main>
+
+    <footer>
+        <p>Hak Cipta © 2024 Warteg Randy</p>
+    </footer>
+</body>
+</html>
